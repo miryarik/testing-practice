@@ -3,7 +3,6 @@ function analyzeArray(arr) {
 
   // array may be empty
   if (arr.length > 0) {
-    
     let sum = 0;
     for (let num of arr) {
       sum += num;
@@ -13,22 +12,19 @@ function analyzeArray(arr) {
     max = Math.max(...arr);
     min = Math.min(...arr);
     length = arr.length;
-
-  }
-  else {
+  } else {
     average = null;
     max = null;
     min = null;
     length = 0;
   }
 
-
   return {
     average,
     max,
     min,
-    length
-  }
+    length,
+  };
 }
 
 function caesarCipher(str, shift) {
@@ -49,9 +45,8 @@ function caesarCipher(str, shift) {
       // calculate shifed char
       const code = (alphabet.indexOf(char.toLowerCase()) + shift) % 26;
       shiftedChar = isUpper ? alphabet[code].toUpperCase() : alphabet[code];
+    }
 
-    } 
-    
     cipherText += shiftedChar;
   }
 
